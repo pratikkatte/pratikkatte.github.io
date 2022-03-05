@@ -1,0 +1,43 @@
+PRIVACY POLICY
+
+Updated and Effective as of: July 4, 2018
+
+We share your concerns about maintaining the integrity and privacy of personal information collected on the internet.  We are committed to protecting your privacy, and this privacy policy (“Policy”) is intended to describe our information collection and dissemination practices.
+
+Please review the entire Policy and feel free to contact us using the contact information below if you have any questions.
+
+
+
+COLLECTION OF INFORMATION
+
+We will collect the following information from Facebook public pages:
+
+- Statuses posted by the public page
+- Aggregate counts of reactions to each status
+- Anonymized user comments to each status
+- Aggregate counts of reactions to each comment
+
+
+
+USE OF INFORMATION
+
+The information will be used to build sentiment analysis algorithms specific to Facebook data.
+
+
+
+SHARING OF INFORMATION
+
+This data will be used for research purposes only and will not be shared with any third parties.
+
+
+
+CONTACT INFORMATION
+
+If you have any questions about this Policy or our practices, please contact us at:
+
+Lauren Fratamico
+Graduate Student - MIT Media Lab
+
+Telephone: (+1) 619-851-7242
+Email: fratamico@mit.edu
+

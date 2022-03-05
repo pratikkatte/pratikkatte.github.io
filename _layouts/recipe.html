@@ -1,0 +1,99 @@
+---
+layout: default
+---
+
+<div class="container">
+        <br>
+        <h1>{{page.title}}</h1>
+        <p class="lead">{{page.subtitle}}</p>
+  
+         <!-- Carousel Fixed Height -->
+        <section class="carousel-fixed-height">
+          <div id="carousel-fixed-height" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+              {% for image in page.images %}
+                {% if forloop.last == true %}
+                  <li data-target="#carousel-fixed-height" data-slide-to="{{forloop.index}}" class="active"></li>
+                {% else %}
+                  <li data-target="#carousel-fixed-height" data-slide-to="{{forloop.index}}" class=""></li>
+                {% endif %}
+              {% endfor %}
+            </ol>
+            <div class="carousel-inner" role="listbox">
+              <!-- NOTE: Bootstrap v4 changes class name to carousel-item -->
+              {% for image in page.images %}
+                {% if forloop.last == true %}
+                  <div class="item active">
+                {% else %}
+                  <div class="item">
+                {% endif %}
+                  <div style="background:url('{{image.url}}') center center; background-size:cover;" class="slider-size">
+                    <div class="carousel-caption">
+                      <h3>{{image.title}}</h3>
+                      <p>{{image.subtitle}}</p>
+                    </div>
+                  </div>
+                </div>
+              {% endfor %}
+              
+              
+            <a class="left carousel-control" href="#carousel-fixed-height" role="button" data-slide="prev">
+              <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#carousel-fixed-height" role="button" data-slide="next">
+              <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+        </section>
+        <!-- /end Carousel Fixed Height -->
+  
+    <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>  
+  <![endif]-->
+      
+      <!-- </div> -->
+      <!-- /.container -->
+  
+      <div class="container-flex">
+  
+        <div class="ingredients">
+          <h3>Ingredients</h3>
+          <ul>
+            {% for ingredient in page.ingredients %}
+              <li>{{ingredient}}</li>
+            {% endfor %}
+          </ul>
+        </div>
+        <div class="instructions">
+          <h3>Instructions</h3>
+          {{ content }}
+    </div>
+  
+      </div>
+  
+  
+  
+  <!-- 
+      <div class="container">
+  
+      <div class="recipe">
+          <h3>Ingredients</h3>
+          <ul>
+            <li>Coffee</li>
+            <li>Tea</li>
+            <li>Milk</li>
+          </ul>  
+        </div>
+  
+        <div class="recipe">
+          <h3>Instructions</h3>
+          <ol>
+            <li>Mix the Coffee</li>
+            <li>Add the Tea</li>
+            <li>Stirrrrr in the Milk</li>
+          </ol>
+        </div> -->
+      </div>
