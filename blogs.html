@@ -2,52 +2,105 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Pratik Katte · Blogs</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="../../favicon.ico">
-
-    <title>Pratik Katte</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="css/main.css" rel="stylesheet">
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-      ga('create', 'UA-88769860-1', 'auto');
-      ga('send', 'pageview');
-
-    </script>
+    <style>
+      .page-header { margin-top: 80px; }
+      .blog-list { margin-top: 20px; padding-left: 0; list-style: none; }
+      .blog-list li { margin-bottom: 14px; }
+      .blog-title { font-size: 18px; margin: 0; }
+      .blog-meta { font-size: 12px; color: #666; margin-bottom: 4px; }
+      .blog-desc { margin: 0; color: #444; }
+    </style>
   </head>
 
   <body>
+    <!-- NAV -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="/">Pratik Katte</a>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="/">Projects</a></li>
+          <li><a href="/publications">Talks and Publications</a></li>
+          <li class="active"><a href="/blogs">Blogs</a></li>
+          <li><a href="/papers/PratikKatteResume.pdf" target="_blank">Resume</a></li>
+        </ul>
+      </div>
+    </nav>
 
+    <!-- CONTENT -->
     <div class="container">
-      <h1>Blogs</h1>
-    
-    </div><!-- /.container -->
+      <div class="page-header">
+        <h1 class="h2">Blogs</h1>
+        <p class="text-muted">
+          Thoughts, insights, and learnings.
+        </p>
+      </div>
+
+      <ul class="blog-list">
+        <li>
+          <a href="/blogs/arg" target="_blank" class="blog-title">Ancestral Recombination Graphs</a>
+          <p class="blog-desc">An overview of Ancestral Recombination Graphs and how they help us understand human evolution and health.</p>
+        </li>
+
+        <li>
+          <a href="/blogs/gfn.html" target="_blank" class="blog-title">Generative Flow Networks</a>
+          <!-- <div class="blog-meta">Machine Learning · Overview</div> -->
+          <p class="blog-desc">My learnings about Generative Flow Networks and how it can be used to solve combinatorial optimization problems.</p>
+        </li>
+
+        <li>
+          <a href="/blogs/wepp.html" target="_blank" class="blog-title">WEPP: Wastewater based Epidimic using phylogenetic placement</a>
+          <!-- <div class="blog-meta">Writing · Tips</div> -->
+          <p class="blog-desc">A wastewater based surveillancetool to detect and montior variants of viruses and be prepared for future outbreaks.</p>
+        </li>
+
+        <li>
+          <a href="https://pratikkatte.substack.com/p/xraysetu" target="_blank" class="blog-title">XraySetu: An assistance to doctors in diagnosing Covid-19
+          </a>
+          <!-- <div class="blog-meta">Health Systems · Essay</div> -->
+          <p class="blog-desc">Artificial Intelligence to help solve the problem of shortage of radiologists</p>
+        </li>
+
+        <li>
+          <a href="https://pratikkatte.substack.com/p/breast-cancer" target="_blank" class="blog-title">Breast Cancer Detection in early stage</a>
+          <!-- <div class="blog-meta">Health Systems · Essay</div> -->
+          <p class="blog-desc">How Niramai is reducing it by early-stage breast cancer detection using its breakthrough technology.
+          </p>
+        </li>
+
+        <li>
+          <a href="https://pratikkatte.substack.com/p/healing-the-broken-health-system" target="_blank" class="blog-title">Healing the Broken Health System in India</a>
+          <!-- <div class="blog-meta">Health Systems · Essay</div> -->
+          <p class="blog-desc">On digitization, accessibility, and building resilient care infrastructure.</p>
+        </li>
+
+        <li>
+          <a href="https://pratikkatte.substack.com/p/lung-function-test/comments" target="_blank" class="blog-title">Lung diseases and diagnostics</a>
+          <!-- <div class="blog-meta">Health Systems · Essay</div> -->
+          <p class="blog-desc">Is there a need for a better lung function test?</p>
+        </li>
+        <li>
+          <a href="https://pratikkatte.substack.com/p/book-summary-waste-of-nation" target="_blank" class="blog-title">Waste of Nation - Garbage, and Growth in India
+          </a>
+          <!-- <div class="blog-meta">Health Systems · Essay</div> -->
+          <p class="blog-desc">Book Summary</p>
+        </li>
+      </ul>
 
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
+      <!-- <p class="text-muted" style="margin-top:18px;">
+        See the full archive on <a href="https://pratikkatte.substack.com/" target="_blank">Substack</a>.
+      </p> -->
+    </div>
+
+    <!-- JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
     <script src="js/bootstrap.min.js"></script>
   </body>
 </html>
-
