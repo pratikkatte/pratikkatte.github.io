@@ -1,0 +1,123 @@
+body {
+  padding-top: 50px;
+}
+.about {
+  padding: 40px 15px;
+}
+
+.about_image {
+  padding-top: 40px;
+  padding-right: 10px;
+}
+
+/*for images within the project descriptions*/
+.project-image-and-text{
+    clear:both;
+}
+.project-image-right{
+    float:right;
+    margin-bottom: 10px;
+    margin-left: 10px
+}
+.project-image-left{
+    float:left;
+    margin-bottom: 10px;
+    margin-right: 10px
+}
+
+/*vertical line, so goes below image*/
+hr {
+	width: 100%
+}
+
+/*for the blog page*/
+.square {
+    float:left;
+    position: relative;
+    width: 30%;
+    
+    margin-right:3.33%;
+    margin-bottom:1.66%;
+    margin-top:1.66%;
+    background-position:center center;
+    background-repeat:no-repeat;
+    background-size:cover; /* you change this to "contain" if you don't want the images to be cropped */
+}
+
+.square:hover {
+  opacity: 0.7;
+}
+
+/*for the blog page*/
+.subimage {
+    float:left;
+    position: relative;
+    width: 100%;
+    padding-bottom : 70%; /* = width for a 1:1 aspect ratio */
+    background-position:center center;
+    background-repeat:no-repeat;
+    background-size:cover; /* you change this to "contain" if you don't want the images to be cropped */
+}
+
+.blog_text {
+	text-align: center;
+}
+
+
+/*for the recipes pages*/
+.slider-size {
+  height: 300px; 
+}
+
+
+.recipe {
+    float:left;
+    position: relative;
+    width: 45%;
+    
+    margin-right:2.5%;
+    margin-bottom:1.66%;
+    margin-top:1.66%;
+}
+
+
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.container-flex {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 15px 0 0 0;
+}
+
+.ingredients {
+  background: #F8F8F8;
+  border: 1px solid #C0C0C0;
+  border-radius: 4px;
+  padding: 0 0 0 15px;
+  margin: 0 0 15px 0;
+  width: calc(33.3333%);
+}
+
+.instructions {
+  margin: 0 0 15px 15px;
+  width: calc(66.6666% - 15px);
+}
+
+
+@media only screen and (max-device-width: 500px) {
+  .ingredients {
+      background: #F8F8F8;
+      border: 1px solid #C0C0C0;
+      border-radius: 4px;
+      padding: 0 0 0 15px;
+      margin: 0 0 15px 0;
+      width: calc(100%);
+    }
+}
