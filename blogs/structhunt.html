@@ -38,8 +38,44 @@
       <div class="page-header">
         <h1 class="h2">StructHunt</h1>
         <p class="text-muted">
-          A Hackathon project to build a tool to help researchers in structural biology to find the structure of a protein.
+          A Hackathon-winning project to build a tool to help researchers in structural biology to find the structure of a protein.
         </p>
+      </div>
+      <div>
+        At the QBI Hackathon at UCSF, 2023, our team built something we’ve been wishing existed for a while: a way to automatically track biomolecular structures 
+        mentioned in preprints and surface them to the RCSB Protein Data Bank (PDB). In just 36 hours, we launched a fully working prototype — and it won us first place 🏆.
+      </div>
+      <div>
+        <h2 class="h3">
+          Why We Built StructHunt
+        </h2>
+        <p>
+          Structural biology data is the backbone of modern life sciences. The success of AlphaFold2 and the urgency of the COVID-19 pandemic showed us how critical fast access 
+          to structural data is — whether for basic science or drug development.
+        </p>
+        <p>
+          But there’s a bottleneck: preprints on bioRxiv and medRxiv often describe integrative biomolecular structures that don’t get deposited into the PDB or PDB-Dev archive right away. 
+          That lag slows down discovery. StructHunt is designed to close that gap.
+        </p>
+      </div>
+      <div>
+        <h2 class="h3">How it works</h2>
+        <p>
+          StructHunt is designed as a cloud-native, LLM-driven workflow that turns fresh preprints into actionable insights for the structural biology community. New papers from bioRxiv and medRxiv are automatically ingested and converted into vector embeddings using LLM-based representations. These embeddings are stored in Lantern, a scalable vector database, and searched with FAISS retrieval to rapidly isolate passages that mention integrative biomolecular structures. The retrieved text is then processed by ChatGPT-4.0, which extracts metadata, identifies structural details, and generates concise, human-readable summaries. These outputs flow into Google Docs for collaborative review and are distributed through automated email notifications to the RCSB PDB biocuration team, enabling faster prioritization of new findings. 
+          The entire system is hosted on AWS, giving us scalability, reliability, and a clear path to production-level deployment.
+        </p>
+      </div>
+      <div>
+        <p>
+          <b>StructHunt started as a 36-hour sprint, but it points toward a bigger vision: AI-driven infrastructure that keeps scientific data as fresh as the discoveries themselves.</b> <a href="https://github.com/aozalevsky/structhunt">GitHub repo</a>
+        </p>
+      </div>
+      <div>
+      <div style="text-align: center;">
+        <img src="/images/structhunt_team.jpg" alt="StructHunt team" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 4px; margin-bottom: 15px;">
+        <p class="text-muted" style="font-size: 0.95em;">StructHunt team at the QBI Hackathon at UCSF, 2023.</p>
+      </div>
+
       </div>
     </div>
 
