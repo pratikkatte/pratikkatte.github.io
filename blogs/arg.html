@@ -7537,30 +7537,67 @@ a.anchor-link {
 <div class="container">
 
   <div class="page-header">
-    <!-- <h1 class="h2">Ancestral Recombination Graphs</h1> -->
-    <p class="text-muted">
-      work in progress...
-    </p> 
+    <h1 class="h2">Lorax: A Tool to Explore Genetic Ancestry.</h1>
   </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=67014cab">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+
+<div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<div style="display: flex; align-items: flex-start; gap: 24px;">
+  <div style="flex: 1;">
+    <p>
+      When people talk about family trees in genetics, they usually mean phylogenetic trees — simple branching diagrams that show how species or individuals are related. Those are useful, but they miss something important: recombination. 
+    </p>
+    <p>
+      DNA doesn’t just get copied and passed down in tidy branches. Segments shuffle, swap, and recombine. That means if we want the full picture of how our genomes have been inherited, we need something more complex than a tree. That’s where Ancestral Recombination Graphs (ARGs) come in.
+    </p>
+    <p>
+      An ARG is like a blueprint of genetic history. It doesn’t just say “these two lineages merged here,” it also keeps track of the places where DNA was exchanged. In other words, ARGs can show not just who our ancestors were, but also how the pieces of their DNA got mixed together and passed down over time.
+    </p>
+  </div>
+  <figure style="margin: 0;">
+    <div style="display: flex; justify-content: center;">
+      <img src="/images/args_image.png" alt="Ancestral Recombination Graph Example" style="max-width: 200px; height: auto; object-fit: contain; border: 2px solid #888; padding: 2px; background: #fff;" />
+    </div>
+    <figcaption style="font-size: 10px; color: #666; text-align: center; margin-top: 4px;">
+      <i>R Neilson et. al., 2019. <a href="https://doi.org/10.1038/s41576-024-00772-4">source</a></i>
+    </figcaption>
+  </figure>
 </div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="Ancestral-Recombination-Graphs">Ancestral Recombination Graphs<a class="anchor-link" href="#Ancestral-Recombination-Graphs">¶</a></h1>
+<div style="display: flex; align-items: flex-start;">
+  <div style="flex: 1;">
+    <h2>Why ARGs are important</h2>
+    <p>
+      ARGs are powerful because they let us study human history at a much deeper level. With them, we can see how our species has evolved over time, understand population histories and migrations, explore connections between ancestry and health, and even spot recombination hotspots and patterns that a plain tree would miss. In short, ARGs give us a richer, more realistic view of evolution.
+    </p>
+    <p>
+      In short, ARGs give us a richer, more realistic view of evolution.
+    </p>
+  </div>
+  </div> 
+  <div style="flex: 1;">
+    <h2>Lorax — making ARGs interactive</h2>
+    <p>
+      The problem is: ARGs are really hard to work with. They’re massive, complicated graphs that don’t fit neatly on a page. For a long time, most people in biology just couldn’t explore them without writing custom code.
+    </p>
+    <p>
+That’s why I’ve been working on Lorax. It’s a web app that makes ARGs interactive. Instead of staring at a static figure, you can pan, zoom, and explore genetic ancestry like you would with a map.
+    </p>
+    Lorax is built to help you:
+    <ul>
+      <li>Browse whole-genome tree sequences in your browser.</li>
+      <li>Watch how ancestry changes across recombination breakpoints.</li>
+      <li>Get both the “big picture” and the fine detail, depending on what you’re curious about.</li>
+      <li>Even ask questions about the data with AI assistance (still experimental, but fun).</li>
+    </ul>
+  </div>
+  <div style="flex: 1;">
+    <h2>Looking ahead</h2>
+    <p>
+      My hope with Lorax is simple: to make ARGs less mysterious. These graphs hold an incredible amount of information, but until now they’ve been locked away in theory papers and hard-to-use code. By putting them into an explorable, visual form, we can start using ARGs to tell the real stories of how our genomes came to be.
+    </p>
+    <p>Because sometimes to understand evolution, you need to see not just the trees… but the whole forest. 🌲</p>
+  </div>
 </div>
 </div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=40e107ca">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>In genetics and evolutionary biology, one of the central goals is to trace how DNA has been passed down across generations to understand where we come from and how populations change. 
-Traditionally, scientists use family trees or phylogenetic trees to capture these relationships, but those only show simple branching patterns of ancestry. Ancestral Recombination Graphs (ARGs) go a step further: they not only record when lineages merge at common ancestors but also when segments of DNA are shuffled and exchanged through recombination. In this way, ARGs act like detailed blueprints of genetic history, showing not just who our ancestors were, but also how pieces of their DNA have been mixed and transmitted over time. This richer picture makes them powerful for studying human history, evolution, and health.</p>
 </div>
 </div>
 </div>
