@@ -38,6 +38,65 @@
       <div class="page-header">
         <h1 class="h2">WEPP: Wastewater based Epidimic using phylogenetic placement</h1>
       </div>
+      <p>
+        If the last few years have taught us anything, it’s that wastewater has a story to tell. During COVID-19, scientists realized that the stuff flowing through our pipes carries fragments of viral genomes shed by everyone in the community. With the right tools, that messy mix can give us an early warning of outbreaks — sometimes weeks before clinical testing catches up. That’s the idea behind wastewater-based epidemiology (WBE), and it’s been adopted everywhere from university dorms to entire cities.
+      </p>
+      <p>
+        But here’s the catch: most existing tools only get us so far. They can usually tell us which lineages (like BA.5, XBB, etc.) are in a sample and roughly how abundant they are. That’s useful, but it’s a bit like knowing which family someone belongs to without knowing which sibling they actually are. When you’re trying to track outbreaks, introductions, or novel variants, lineage-level resolution just isn’t enough.
+      </p>
+      <p>
+        In collaboration with the Turakhia Lab at UC San Diego, we developed WEPP: Wastewater Epidemiology using Phylogenetic Placements
+      </p>
+
+      <div>
+        <h3>What is WEPP?</h2>
+        <div class="row">
+          <div class="col-md-8">
+            <p>
+              WEPP stands for Wastewater Epidemiology using Phylogenetic Placements. Instead of stopping at lineages, WEPP zooms in on haplotypes — the actual sequence variants floating around in a community. It works by placing wastewater sequencing reads onto a mutation-annotated phylogenetic tree (MAT) — essentially a giant family tree of all the clinical sequences that have ever been collected (plus inferred ancestors).
+            </p>
+            <p>
+              From there, WEPP figures out which haplotypes are most likely present in the wastewater, estimates their abundances, and even highlights mutations it can’t explain (these “unaccounted alleles” often hint at cryptic or novel variants).
+            </p>
+            <p>
+              And the best part? WEPP isn’t just for SARS-CoV-2. It’s designed to be pathogen-agnostic, and the team has already tested it on things like RSV and Mpox.
+            </p>
+          </div>
+          <div class="col-md-4" style="text-align:right;">
+            <img src="/images/wepp-workflow.png" alt="WEPP phylogenetic placement diagram" class="img-responsive" style="max-width:100%; height:auto; margin-top:10px;">
+          </div>
+        </div>
+      </div>
+      <div>
+        <h3>Why does this matter?</h3>
+        <p>
+          By moving beyond lineage-level summaries, WEPP makes it possible to do things that older wastewater tools couldn’t. It can distinguish fine-grained clusters within a single lineage, helping reveal separate introductions or localized outbreaks that would otherwise be hidden. It can also flag when a new variant cluster shows up in a region and even point to its likely source, providing an early signal for public health action. On top of that, WEPP systematically surfaces unexplained mutations—so-called unaccounted alleles—that often mark the presence of cryptic or emerging variants. And because it’s not limited to SARS-CoV-2, WEPP extends these capabilities to pathogens like RSV, Mpox, and influenza, where clinical sequencing data are often scarce.
+        </p>
+      </div>
+      <div class="row">
+        <div class="col-md-8">
+          <h3>A dashboard for exploration</h3>
+          Another neat part of WEPP is its interactive dashboard. It’s not just a black-box pipeline — you can actually visualize:
+          <ul>
+            <li>Haplotypes detected in your sample on the global phylogeny</li>
+            <li>Their estimated abundances and lineage assignments</li>
+            <li>Read-to-haplotype mappings</li>
+            <li>The mysterious unaccounted alleles</li>
+          </ul>
+          <p>
+            It's built on top of Taxonium, but built specifically for wastewater data. The public health teams don’t just get summary stats — they can actually dig into the details and interpret what’s going on.
+          </p>
+        </div>
+        <div class="col-md-4" style="text-align:right;">
+          <img src="/images/wepp-dashboard.png" alt="WEPP dashboard screenshot" class="img-responsive" style="max-width:100%; height:auto; margin-top:10px;">
+        </div>
+      </div>
+      <div>
+        <br/>
+        <p>
+        Wastewater is one of the most promising tools we have for post-pandemic pathogen surveillance, especially as clinical sequencing efforts taper off. With WEPP, we now have a way to use that signal at near-haplotype resolution, not just lineages. That opens up possibilities for faster detection, finer-scale tracking, and broader pathogen coverage.
+      </p>
+      </div>
     </div>
 
     <!-- JS -->
