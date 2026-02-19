@@ -56,7 +56,7 @@ qiubaiying.github.io
             <li><a href="/publications">Talks and Publications</a></li>
             <!-- <li><a href="https://pratikkatte.substack.com/" target="_blank">Blogs</a></li> -->
             <li><a href="/blogs" target="_blank">Blogs</a></li>
-            <li><a href="/papers/PratikKatteResume.pdf" target="_blank">Resume</a></li>
+            <!-- <li><a href="/papers/PratikKatteResume.pdf" target="_blank">Resume</a></li> -->
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -66,7 +66,7 @@ qiubaiying.github.io
       <div class="about">
         <h1>Pratik Katte</h1>
         <p class="lead"> <b>Graduate Student @ <a href="https://corbett-lab.github.io/" >Corbett-Detig Lab</a></b><br>
-        Interested in Generative AI and Phylogenetics<br>
+        Interested in Evolution and Generative AI<br>
         <a href="mailto:pratikkatte7@gmail.com">Email</a>.
         <a href="https://linkedin.com/in/pratikkatte" target="_blank">LinkedIn</a>.
         <a href="https://github.com/pratikkatte" target="_blank">Github</a>.
@@ -77,8 +77,8 @@ qiubaiying.github.io
         <p>
           <ul style="columns: 2; -webkit-columns: 2; -moz-columns: 2; list-style-type: none; padding-left:0;">
             
-            <li><a href="#PHYLO">Large Language Model and Tree-sequences</a></li>
-            <li><a href="#PHYLO">Interactive Dashboard for Wastewater Pathogen Surveillance</a></li>
+            <li><a href="#lorax">Lorax</a></li>
+            <li><a href="#wepp">WEPP: Wastewater Based Pathogen Surveillance</a></li>
             <li><a href="#QBI">StructHunt</a></li>
             <li><a href="#XraySetu">XraySetu</a></li>
             <li><a href="#NFT">Niramai Fever Test</a></li>
@@ -87,40 +87,42 @@ qiubaiying.github.io
           </ul>
         </p>
     <hr>
-    <div style="padding-top: 50px; margin-top: -50px;" id="XraySetu">
-      <h3>Tree-sequence analysis and visualization using LLM</h3>
+    <div style="padding-top: 50px; margin-top: -50px;" id="lorax">
+      <h3>Lorax: : Analysis and explorationof biobank-scale Ancestral Recombination Graphs</h3>
       <div class="image-and-text">
         <div>
-          <b>
-            <a href="https://github.com/pratikkatte/lorax">[git repository]</a></b> 
+          <b><a href="https://github.com/pratikkatte/lorax">[Github]</a></b> 
+          <b><a href="https://lorax.ucsc.edu/">[Website]</a></b>
         </div>
         <div>
+        </div>
+        <div class="project-image-right" style="border: 2px solid #ccc;">
+          <img height="200px" src="https://raw.githubusercontent.com/pratikkatte/lorax/main/docs/images/lorax-demo-2.gif"> 
         </div>
         <br>
         <div>
-          This project aims to make tree-sequence analysis more accessible by integrating large language models (LLMs) with an interactive, natural language-based interface. Traditionally, analyzing tree-sequences—a powerful method in evolutionary biology and population genetics—requires programming expertise, limiting its use to computationally skilled researchers. By combining LLMs with Retrieval-Augmented Generation (RAG), the system can interpret user queries in plain language and generate accurate, executable code using the tskit library. Additionally, the project is developing a Taxonium-inspired visualization framework tailored for tree-sequences, enabling intuitive exploration of large-scale genomic data. Together, these tools simplify complex analyses and broaden access to cutting-edge evolutionary research.
-        </div>
+          Lorax is a tool for interactive exploration of biobank-scale Ancestral Recombination Graphs (ARGs). It lets users scroll across the genome and watch the local genealogy change as recombination reshuffles ancestry. Alongside the trees, Lorax links what you’re seeing to coalescent time (branch length), variants, and sample metadata such as population, cohort, and custom labels. The goal is to make genetic ancestry more intuitive and help researchers quickly spot hidden patterns that are hard to see in static plots.        </div>
         <br>
         <br>
       </div>
     </div>
     
     <hr>
-    <div style="padding-top: 50px; margin-top: -50px;" id="XraySetu">
-      <h3>Interactive Dashboard for Wastewater Pathogen Surveillance</h3>
+    <div style="padding-top: 50px; margin-top: -50px;" id="wepp">
+      <h3>WEPP: Wastewater Based Pathogen Surveillance</h3>
       <div class="image-and-text">
         <div class="project-image-right" style="border: 2px solid #ccc;">
-          <img height="200px" src="images/waste-water.png"> 
+          <img height="200px" src="images/wepp.png"> 
         </div>
         <div>
-          <b>This project is in collaboration with the <a href="https://turakhia.ucsd.edu/">Turakhia lab, UCSD</a>.  <a href="https://github.com/pratikkatte/Wastewater-Dasboard">[git repository]</a></b> 
+            <b><a href="https://github.com/TurakhiaLab/WEPP/">[Github]</a></b> 
+            <b><a href="https://turakhia.ucsd.edu/WEPP/">[Website]</a></b>
         </div>
         <div>
         </div>
         <br>
         <div>
-          I’m developing an interactive, real-time visualization dashboard that integrates the output generated by the WEPP (Wastewater Epidemiology and Pathogen Prediction) pipeline, a powerful computational tool developed by the Turakhia Lab at UCSD. WEPP analyzes wastewater sequencing data to detect circulating viral haplotypes, quantify lineage abundances, and flag cryptic or unaccounted mutations—potential early indicators of emerging variants. In collaboration with the Turakhia Lab, my dashboard bridges the gap between complex genomic outputs and actionable public health insights by presenting this information through intuitive, interactive visual interfaces. It leverages tools like Taxonium for phylogenetic tree visualization and JBrowse for genome-level inspection of sequencing reads, allowing users to explore the relationship between detected haplotypes and observed mutations directly on the reference genome.
-        </div>
+          WEPP (Wastewater-Based Epidemiology using Phylogenetic Placements) is a tool for analyzing wastewater sequencing data for many different pathogens. It uses a large evolutionary “family tree” of the pathogen, built from lots of clinical genomes, to figure out which variants (haplotypes) are likely present in a wastewater sample and about how much of each one is there. WEPP places sequencing reads onto this tree, narrows down a set of likely haplotypes, and then estimates their proportions (and the proportions of broader lineages). It also keeps the results easy to understand by linking reads back to the haplotypes they support. One especially useful feature is “unaccounted alleles”: mutations that show up in the wastewater data but don’t match the haplotypes WEPP inferred, which can be an early hint of a new or emerging variant. On top of that, WEPP includes an interactive dashboard so you can explore the tree, the haplotypes, and the read-level evidence behind the results.        </div>
         <br>
         <br>
       </div>
@@ -183,11 +185,6 @@ qiubaiying.github.io
         <div>
           Xraysetu is widely covered in print and online media by <a href="https://www.ndtv.com/business/a-platform-for-early-covid-detection-over-whatsapp-know-how-it-works-2454475">NDTV</a>, <a href="https://twitter.com/CNBCTV18News/status/1407696320807149569">CNBC-TV18 News</a>, <a href="https://www.gadgetsnow.com/tech-news/government-launches-x-ray-setu-on-whatsapp-how-it-can-help-in-covid-detection/articleshow/83166847.cms?utm_source=twitter&utm_medium=social&utm_campaign=GadgetsNowWAP">Gadgets Now</a>, <a href="https://www.livemint.com/science/aidriven-platform-xraysetu-to-facilitate-early-covid-interventions-over-whatsapp-11622610842322.html">Mint</a>, <a href="https://www.hindustantimes.com/india-news/know-how-centre-s-x-ray-setu-on-whatsapp-can-detect-covid19-101622624422305.html?utm_source=twitter">Hindustan Times</a>, <a href="https://www.business-standard.com/article/current-affairs/x-ray-setu-plans-to-on-board-10k-doctors-for-covid-detection-in-rural-areas-121060100523_1.html">Business Standard</a>, <a href="https://economictimes.indiatimes.com/industry/healthcare/biotech/healthcare/x-ray-setu-plans-to-on-board-10k-doctors-for-covid-detection-in-rural-areas/articleshow/83139712.cms?from=mdr">Economic Times</a>, <a href="https://health.economictimes.indiatimes.com/news/diagnostics/the-core-idea-of-xraysetu-is-to-give-doctors-another-screening-option-for-covid-19-umakant-soniceo-artpark/83103278">ET Healthworld</a>, <a href="https://www.knocksense.com/kanpur/xraysetu-artpark-iit-kanpur-alumnus"> KnockSense</a>, <a href="https://bangaloremirror.indiatimes.com/bangalore/others/smart-and-fastest/articleshow/82983856.cms"> Bangalore Mirror</a>, <a href="https://www.jagran.com/uttar-pradesh/kanpur-city-covid-report-will-be-on-whatsapp-x-ray-setu-is-developed-by-iit-kanpur-alumni-umakant-soni-jagran-special-21687794.html?utm_source=referral&utm_medium=TW&utm_campaign=social_share">Jagran</a>,<a href="https://zeenews.india.com/hindi/health/health-news-xray-setu-will-review-lung-xray-to-detect-covid-19-know-how-samp/909566"> Zee News Hindi</a>, and <a href="https://www.youtube.com/watch?v=VeI2_rUw_C4&ab_channel=PrasarBharatiNewsServices">Prasar Bharti (video)</a>.
         </div>
-
-        <br>
-        <center> <button><a style="color: #000000" href="https://wa.me/918046163838">Try XraySetu</a></button> </center>
-        <br>
-        
       </div>
     </div>
     <hr>
@@ -205,7 +202,7 @@ qiubaiying.github.io
         <br>
 
         <div>
-            The recent outbreak of covid-19 has brought a tremendous impact on the livelihood on the population. Community screening is the most important and primary aspect to reduce the spread of the virus in the cummunity. In order to detect people with covid-19 symptoms, we at Niramai, developed an AI based solution integrated with a thermal camera to measure temperature of a person and also detect if the person is wearing mask or not. We trained a light weight deep learning using thermal images for the task of face detection and mask detection. 
+            The outbreak of covid-19 brought a tremendous impact on the livelihood on the population. Community screening is the most important and primary aspect to reduce the spread of the virus in the cummunity. In order to detect people with covid-19 symptoms, we at Niramai, developed an AI based solution integrated with a thermal camera to measure temperature of a person and also detect if the person is wearing mask or not. We trained a light weight deep learning using thermal images for the task of face detection and mask detection. 
         </div>
         <br>
         <div>
@@ -213,7 +210,7 @@ qiubaiying.github.io
         </div>
         <br>
         <div>
-          [<a href="https://www.niramai.com/fevertest/">More information</a>][<a href="https://youtu.be/CIDAl6MWlx0">Video</a>]
+          [<a href="https://www.niramai.com/fevertest/">More information</a>]
         </div>
         
       </div>
@@ -227,16 +224,10 @@ qiubaiying.github.io
         <div class="project-image-right">
           <img height="300px" src="images/NTCT.jpg"> 
         </div>
+        <div> 
+        </div>
         <div>
-          <p>
-            I lead the development of the Niramai Thermal Capture Tool, a desktop application used by hospital technicians for capturing thermal breast images and seamlessly uploading vital data to the Thermalytix website.
-          </p>
-          <p>
-            This tool was meticulously designed to empower technicians, allowing them to conduct essential preliminary checks before commencing image capture. Moreover, it plays a pivotal role in ensuring technicians adhere meticulously to Niramai's specialized screening protocol for diagnosing breast cancer.
-          </p>
-          <p>
-            By leveraging a sophisticated amalgamation of image processing algorithms and cutting-edge AI models, this tool reflects my vision to equip technicians with robust resources for conducting comprehensive initial assessments, revolutionizing the early detection and diagnosis of breast cancer.
-          </p>
+          Niramai Thermal Capture Tool is a desktop app built for hospital technicians to capture high-precision thermal breast images and upload them directly to the Thermalytix platform. Because thermal imaging is extremely sensitive—small errors in positioning, timing, or protocol can reduce image quality—the tool acts like a built-in quality coach. We trained deep-learning models (paired with image-processing checks) to automatically spot common capture issues early—like inconsistent framing, suboptimal alignment, or protocol deviations—so technicians can correct them on the spot instead of discovering problems later. The result is much more consistent, accurate, and protocol-compliant image capture across technicians and sites, which improves the reliability of downstream AI screening and supports stronger early breast cancer detection. 
         </div>
       </div>
     </div>
@@ -251,12 +242,9 @@ qiubaiying.github.io
       <br>
         <div>
 
-          In 2019, senior of my undergraduate studies, my friend <a href="https://www.linkedin.com/in/venkat-sai-s-97708b8a/">Venkat-sai</a> and I co-founded Rewind, a startup with a vision to revolutionize waste management. Our core focus was on utilizing the existing network of waste pickers, paper and metal shops, and recyclers to create a platform enabling households to efficiently dispose of various items, such as cardboards, plastic bags, electronics, clothes, and furniture. 
+          In 2019, senior of my undergraduate studies, my friend <a href="https://www.linkedin.com/in/venkat-sai-s-97708b8a/">Venkat-sai</a> and I co-founded Rewind, a startup to streamline household recycling by connecting people to local waste pickers, scrap shops, and recyclers. We explored a pickup-based platform for items ranging from plastics and cardboard to electronics and furniture.  
         </div>
       <br>
-      <div>
-        Despite our earnest efforts, Rewind encountered setbacks leading to its failure. A significant challenge was the tightly knit and exclusive nature of the market, controlled by influential figures, which hindered our progress. Additionally, our lack of expertise in effectively managing waste pickers and recyclers contributed to the venture's downfall.
-      </div>
     </div>
 		<hr>
   <br>
